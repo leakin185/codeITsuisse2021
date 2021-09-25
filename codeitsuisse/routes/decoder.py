@@ -26,7 +26,7 @@ def evaluateDecoder():
             rsrp = 0
     else:
         output_received = possible_values
-        rswp = num_slots
+        rswp = num_slots-1
         rsrp = 0
 
     if rswp + rsrp == num_slots:
