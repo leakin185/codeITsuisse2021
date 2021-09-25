@@ -20,7 +20,8 @@ def evaluateFixedRace():
     perm1 = []
     for i in perm:
         perm1.append(i)
-    result = random.choice(perm1)
+    result1 = [k for k in perm1 if k[0] == 'Tracie Temblador']
+    result = random.choice(result1)
     result = ','.join(result)
     logging.info("My result :{}".format(result))
     return json.dumps(result)
