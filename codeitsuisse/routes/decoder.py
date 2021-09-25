@@ -2,6 +2,7 @@ import logging
 import json
 from itertools import permutations, combinations
 from flask import request, jsonify
+import random
 
 from codeitsuisse import app
 
@@ -29,7 +30,11 @@ def evaluateDecoder():
             perm1 = permutations(output_received)
             for x in perm1:
                 perm.append(x)
-    result = random.choice(perm)
+    perm2 = []
+    for i in perm:
+        perm2.append(i)
+
+    result = random.choice(perm2)
 
     logging.info("My result :{}".format(result))
     return json.dumps(result)
