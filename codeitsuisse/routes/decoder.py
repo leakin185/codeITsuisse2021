@@ -36,7 +36,7 @@ def evaluateDecoder():
         comb = combinations(possible_values, num_slots)
         perm = []
         for i in comb:
-            perm1 = permutations(output_received)
+            perm1 = permutations(i)
             for x in perm1:
                 perm.append(x)
     perm2 = []
