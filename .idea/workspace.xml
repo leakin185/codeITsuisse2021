@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f93a891-cdbc-402d-a835-072fd816d735" name="Default" comment="asteroid">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codeitsuisse/routes/fixedrace.py" beforeDir="false" afterPath="$PROJECT_DIR$/codeitsuisse/routes/fixedrace.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533474856276</updated>
-      <workItem from="1632534608953" duration="5364000" />
+      <workItem from="1632534608953" duration="5487000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1632535712890</created>
@@ -148,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632569581785</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="asteroid">
+      <created>1632572677668</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1632572677669</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
