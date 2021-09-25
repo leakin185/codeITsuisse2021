@@ -17,8 +17,12 @@ def evaluateDecoder():
     possible_values = data["possible_values"]
     output_received = data["history"][0]["output_received"]
     result = [int(i) for i in str(result)]
-    rswp = result[0]
-    rsrp = result[1]
+    if len(result) == 2:
+        rswp = result[0]
+        rsrp = result[1]
+    elif len(result) == 1:
+        rswp = result[0]
+        rsrp = 0
 
     if rswp + rsrp == num_slots:
         # no need for combinations
