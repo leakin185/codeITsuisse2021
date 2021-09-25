@@ -21,5 +21,6 @@ def evaluateFixedRace():
     for i in perm:
         perm1.append(i)
     result = random.choice(perm1)
+    result = ','.join(result)
     logging.info("My result :{}".format(result))
     return json.dumps(result)
