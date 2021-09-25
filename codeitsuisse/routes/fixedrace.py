@@ -20,7 +20,7 @@ def evaluateFixedRace():
     perm1 = []
     for i in perm:
         perm1.append(i)
-    result1 = [k for k in perm1 if "Alysia Alejandro" in k]
+    result1 = [k for k in perm1 if "Franklin Filippi" in k]
     result2 = [k for k in result1 if "Tracie Temblador" in k]
     result = random.choice(result2)
     result = ','.join(result)
