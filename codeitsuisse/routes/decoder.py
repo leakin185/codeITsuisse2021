@@ -12,16 +12,21 @@ logger = logging.getLogger(__name__)
 def evaluateDecoder():
     data = request.get_json()
     logging.info("data sent for evaluation {}".format(data))
-    result = data["history"][0]["result"]
     num_slots = data["num_slots"]
     possible_values = data["possible_values"]
-    output_received = data["history"][0]["output_received"]
-    result = [int(i) for i in str(result)]
-    if len(result) == 2:
-        rswp = result[0]
-        rsrp = result[1]
-    elif len(result) == 1:
-        rswp = result[0]
+    if data["history"]:
+        output_received = data["history"][0]["output_received"]
+        result = data["history"][0]["result"]
+        result = [int(i) for i in str(result)]
+        if len(result) == 2:
+            rswp = result[0]
+            rsrp = result[1]
+        elif len(result) == 1:
+            rswp = result[0]
+            rsrp = 0
+    else:
+        output_received = possible_values
+        rswp = num_slots
         rsrp = 0
 
     if rswp + rsrp == num_slots:
