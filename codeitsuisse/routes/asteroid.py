@@ -59,8 +59,7 @@ def evaluateAsteroid():
 
         if left != -1 and right < len(array):
             if array[left] == array[right]:
-                string = array[left + 1:right]
-                array = array.replace(string, array[left])
+                array = array[:left + 1] + array[left] + array[right:]
                 return pointCount(left + 1, array, count)
             else:
                 return count
