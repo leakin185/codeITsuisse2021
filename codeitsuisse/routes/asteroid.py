@@ -16,6 +16,8 @@ def evaluateAsteroid():
     inputList = data.get("test_cases")
     result = [dict() for number in range(len(inputList))]
 
+    from collections import Counter
+
     def pointCount(origin, array, count=1):
 
         original_count = count
@@ -31,20 +33,29 @@ def evaluateAsteroid():
                 count += len(array) - 1
                 left = -1
             elif array[left] == array[origin] and array[right] == array[origin]:
-                while left != -1 and array[left] == array[origin]:
-                    count += 1
-                    left -= 1
                 while right < len(array) and array[right] == array[origin]:
                     count += 1
                     right += 1
+                while left != -1 and array[left] == array[origin]:
+                    count += 1
+                    left -= 1
             else:
                 break
 
+        if original_count != 1:
             new_count = count - original_count
-            if new_count >= 7:
+
+            if 7 <= new_count < 10:
                 count = new_count * 1.5 + original_count
             elif new_count >= 10:
                 count = new_count * 2 + original_count
+
+        else:
+            new_count = count
+            if 7 <= new_count < 10:
+                count = new_count * 1.5
+            elif new_count >= 10:
+                count = new_count * 2
 
         if left != -1 and right < len(array):
             if array[left] == array[right]:
