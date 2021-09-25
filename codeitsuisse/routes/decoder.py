@@ -34,7 +34,8 @@ def evaluateDecoder():
     for i in perm:
         perm2.append(i)
 
-    result = random.choice(perm2)
+    result1 = random.choice(perm2)
+    result = {"answer": result1}
 
     logging.info("My result :{}".format(result))
     return json.dumps(result)
