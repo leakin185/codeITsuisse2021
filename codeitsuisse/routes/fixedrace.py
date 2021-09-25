@@ -25,4 +25,4 @@ def evaluateFixedRace():
     result = random.choice(result2)
     result = ','.join(result)
     logging.info("My result :{}".format(result))
-    return result
+    return json.dumps(result)
