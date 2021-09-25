@@ -3,6 +3,7 @@ app = Flask(__name__)
 import codeitsuisse.routes.square
 import codeitsuisse.routes.asteroid
 import codeitsuisse.routes.fixedrace
+import codeitsuisse.routes.decoder
 
 
 
