@@ -66,7 +66,7 @@ def evaluateAsteroid():
         max_score = max(result1)
         origin = result1.index(max_score)
         result[i]['origin'] = origin
-        result[i]['score'] = max_score
+        result[i]['score'] = int(max_score)
 
     logging.info("My result :{}".format(result))
     return json.dumps(result)
